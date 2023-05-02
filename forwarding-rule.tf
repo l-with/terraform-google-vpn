@@ -15,7 +15,7 @@
  */
 
 locals {
-  vpn_gw_ip = var.vpn_gw_ip == "" ? google_compute_address.vpn_gw_ip[0].address : var.vpn_gw_ip
+  vpn_gw_ip = var.create_vpn_gw_ip ? google_compute_address.vpn_gw_ip[0].address : var.vpn_gw_ip
 }
 # Assosciate external IP/Port-range to VPN-GW by using Forwarding rules
 resource "google_compute_forwarding_rule" "vpn_esp" {
