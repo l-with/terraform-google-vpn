@@ -136,8 +136,14 @@ variable "ike_version" {
 
 variable "vpn_gw_ip" {
   type        = string
-  description = "Please enter the public IP address of the VPN Gateway, if you have already one. Do not set this variable to autocreate one"
+  description = "Please enter the public IP address of the VPN Gateway, if you have already one. Do set create_vpn_gw_ip to true to autocreate one"
   default     = ""
+}
+
+variable "create_vpn_gw_ip" {
+  type        = bool
+  description = "If the public IP address of the VPN Gateway should be created"
+  default     = false
 }
 
 variable "route_tags" {
