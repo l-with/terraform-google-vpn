@@ -143,7 +143,7 @@ variable "vpn_gw_ip" {
 variable "create_vpn_gw_ip" {
   type        = bool
   description = "If the public IP address of the VPN Gateway should be created"
-  default     = false
+  default     = true
 }
 
 variable "route_tags" {
